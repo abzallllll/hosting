@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>факты о космосе</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+    <div class="box"><h1 class="vad">интересные факты о космосе</h1></div>
+    
+    
+    <div class="box1">
+        <h3>Космос пахнет металлом и барбекю</h3>
+        <p>Астронавты, возвращаясь в космический корабль после выхода в открытый космос, отмечают, что их скафандры имеют запах металла, сварки или барбекю. Этот запах, вероятно, обусловлен реакцией атомов космоса с поверхностью скафандра.</p>
+    </div>
+    <div class="box1">
+        <h3>На Венере идет дождь из серной кислоты</h3>
+        <p>Атмосфера Венеры насыщена облаками серной кислоты. Из-за экстремально высокой температуры поверхности (около 470 °C) этот "дождь" не достигает земли, испаряясь раньше.</p>
+    </div>
+    <img class="d" src="image.png" alt="">
+    <div class="box1">
+        <h3>В космосе существует "запрограммированный" холод</h3>
+        <p>Температура в открытом космосе колеблется около -270 °C. Это почти абсолютный ноль, точка, при которой молекулы практически перестают двигаться.
+        </p></div>
+    
+    <div class="box1">
+        <h3>Самый громкий звук — от черной дыры</h3>
+        <p>Черная дыра в центре скопления Персея генерирует звуковые волны. Они настолько низкочастотные, что человеческое ухо их не воспринимает, но при переводе их в доступный диапазон они звучат как глубокий бас.</p>
+    </div>
+    <div class="box1">
+        <h3>Сатурн и Юпитер имеют дожди из алмазов</h3>
+        <p> В атмосфере этих газовых гигантов молнии превращают метан в сажу, которая затем превращается в графит и алмазы под высоким давлением.</p>
+    </div>
+    <div class="box1">
+        <h3>Солнце занимает 99,86% массы Солнечной системы</h3>
+        <p>Солнце настолько массивно, что его масса превосходит массу всех планет, астероидов и комет вместе взятых.</p>
+    </div>
+    <hr>
+    <div class="box"><h2>это видио о космосе:</h2></div>
+    
+    <iframe class="a" width="560" height="315" src="https://www.youtube.com/embed/Kgr6q9kKut8?si=TY_tPy8ebrzX1viP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <hr>
+    <div class="box"><h2>если вы знаете ещё фактов напишите в телеграм боте:</h2>
+    <a href="https://t.me/tiftelka_bot">это бот помощник</a>
+    </div>
+     
+     
+
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <form class="vad" id="telegramForm">
+        <textarea id="message" placeholder="Введите сообщение" required></textarea><br>
+        <button type="submit">Отправить</button>
+    </form>
+
+    <script class="vad">
+        const BOT_TOKEN = "7832285863:AAEHGOH5sdDJWSQp6kR838iTszZauz-EwzY"; // Замените на ваш токен
+        const CHAT_ID = "7173596057"; // Замените на ваш chat_id
+
+        document.getElementById("telegramForm").onsubmit = async (event) => {
+            event.preventDefault(); // Предотвращает перезагрузку страницы
+            const message = document.getElementById("message").value;
+
+            if (!message.trim()) {
+                alert("Введите сообщение!");
+                return;
+            }
+
+            const url = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`;
+
+            const response = await fetch(url, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    chat_id: CHAT_ID,
+                    text: message,
+                }),
+            });
+
+            if (response.ok) {
+                alert("Сообщение отправлено!");
+                document.getElementById("message").value = ""; // Очистить поле ввода
+            } else {
+                alert("Ошибка отправки сообщения.");
+            }
+        };
+    </script>
+    <hr class="s">
+
+   
+
+
+</body>
+</html>

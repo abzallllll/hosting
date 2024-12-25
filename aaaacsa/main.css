@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 50px 50px 50px 50px;
+    background-color: rgb(20, 26, 27);
+    color: #000000;
+}
+.vad{
+    text-align: center;
+}
+.box{
+    margin: 20px 200px 20px 200px;
+    background-color: rgb(155, 155, 155);
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 40px;
+
+}
+.box1{
+    background-color: rgb(155, 155, 155) ;
+   margin: 20px 0px 20px 0px;
+   padding: 30px 20px 30px 30px;
+   border-radius: 40px;
+   text-align: center;
+
+}
+.d{
+    margin-left: 150px;
+    border-radius: 20px;
+}
+.a{
+    margin-left: 400px;
+    border-radius: 20px;
+}
+.s{
+    margin-top: 20px;
+}
